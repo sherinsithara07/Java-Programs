@@ -1,0 +1,16 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "radar";
+        int left = 0, right = str.length() - 1;
+        boolean isPal = true;
+        while (left < right) {
+            if (str.charAt(left) != str.charAt(right)) {
+                isPal = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        System.out.println("Is palindrome: " + isPal);
+    }
+}
