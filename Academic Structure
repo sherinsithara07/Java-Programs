@@ -1,0 +1,26 @@
+class Person {
+    String name;
+    Person(String name) { this.name = name; }
+    void display() { System.out.println("Name: " + name); }
+}
+
+class Student extends Person {
+    String course;
+    Student(String name, String course) { super(name); this.course = course; }
+    void display() { super.display(); System.out.println("Course: " + course + ", Role: Student"); }
+}
+
+class GraduateStudent extends Student {
+    String thesis;
+    GraduateStudent(String name, String course, String thesis) { super(name, course); this.thesis = thesis; }
+    void display() { super.display(); System.out.println("Thesis: " + thesis + ", Role: Graduate Student"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Person p = new Person("John");
+        Student s = new Student("Jane", "CS");
+        GraduateStudent gs = new GraduateStudent("Bob", "AI", "ML");
+        p.display(); s.display(); gs.display();
+    }
+}
