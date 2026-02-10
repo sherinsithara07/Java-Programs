@@ -1,0 +1,19 @@
+class Employee {
+    private String name;
+    private int age;
+
+    public Employee() { name = "Unknown"; age = 0; }
+    public Employee(String name) { this.name = name; age = 0; }
+    public Employee(String name, int age) { this.name = name; this.age = age; }
+
+    public void display() { System.out.println("Name: " + name + ", Age: " + age); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        Employee e2 = new Employee("Alice");
+        Employee e3 = new Employee("Bob", 30);
+        e1.display(); e2.display(); e3.display();
+    }
+}
