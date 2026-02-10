@@ -1,0 +1,7 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "Hello World Example";
+        String noSpaces = str.replaceAll("\\s", "");
+        System.out.println(noSpaces);
+    }
+}
