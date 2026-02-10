@@ -1,0 +1,14 @@
+class InterestCalculator {
+    private double p, r, t;
+    public InterestCalculator(double p, double r, double t) {
+        this.p = p; this.r = r; this.t = t;
+    }
+    public double calculate() { return (p * r * t) / 100; }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        InterestCalculator calc = new InterestCalculator(1000, 5, 2);
+        System.out.println("Simple Interest: " + calc.calculate());
+    }
+}
