@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+class InvalidInputException extends Exception {
+    InvalidInputException(String message) {
+        super(message);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            System.out.print("Enter age: ");
+            int age = sc.nextInt();
+            if (age < 0) {
+                throw new InvalidInputException("Age cannot be negative");
+            }
+            System.out.println("Valid age: " + age);
+        } catch (InvalidInputException e) {
+            System.out.println("Error: " + e.getMessage());
+       
