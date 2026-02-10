@@ -1,0 +1,15 @@
+import java.util.HashSet;
+
+public class Main {
+    public static void main(String[] args) {
+        String str = "hello";
+        HashSet<Character> seen = new HashSet<>();
+        HashSet<Character> duplicates = new HashSet<>();
+        for (char c : str.toCharArray()) {
+            if (!seen.add(c)) {
+                duplicates.add(c);
+            }
+        }
+        System.out.println("Duplicate characters: " + duplicates);
+    }
+}
