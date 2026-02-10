@@ -1,0 +1,26 @@
+class Employee {
+    String name;
+    Employee(String name) { this.name = name; }
+    void display() { System.out.println("Name: " + name); }
+}
+
+class Manager extends Employee {
+    String dept;
+    Manager(String name, String dept) { super(name); this.dept = dept; }
+    void display() { super.display(); System.out.println("Dept: " + dept + ", Role: Manager"); }
+}
+
+class Developer extends Employee {
+    String lang;
+    Developer(String name, String lang) { super(name); this.lang = lang; }
+    void display() { super.display(); System.out.println("Lang: " + lang + ", Role: Developer"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Employee("John");
+        Manager m = new Manager("Jane", "HR");
+        Developer d = new Developer("Bob", "Java");
+        e.display(); m.display(); d.display();
+    }
+}
