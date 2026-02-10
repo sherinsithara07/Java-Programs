@@ -1,0 +1,20 @@
+public class Main {
+    public static void main(String[] args) {
+        try {
+            int[] arr = {1, 2, 3};
+            int a = 10, b = 0;
+            int result = a / b;  // ArithmeticException
+            System.out.println("Result: " + result);
+            System.out.println("Array element: " + arr[5]);  // ArrayIndexOutOfBoundsException
+            int num = Integer.parseInt("abc");  // NumberFormatException
+        } catch (ArithmeticException e) {
+            System.out.println("Error: Division by zero");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: Array index out of bounds");
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Invalid number format");
+        } catch (Exception e) {
+            System.out.println("Error: General exception - " + e.getMessage());
+        }
+    }
+}
