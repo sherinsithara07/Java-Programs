@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {4, 5, 6};
+        int[] merged = mergeArrays(arr1, arr2);
+        for (int i : merged) System.out.print(i + " ");
+    }
+    public static int[] mergeArrays(int[] arr1, int[] arr2) {
+        int[] result = new int[arr1.length + arr2.length];
+        System.arraycopy(arr1, 0, result, 0, arr1.length);
+        System.arraycopy(arr2, 0, result, arr1.length, arr2.length);
+        return result;
+    }
+}
