@@ -1,0 +1,19 @@
+interface Payment {
+    void pay();
+}
+
+class CreditCard implements Payment {
+    public void pay() { System.out.println("Credit Card"); }
+}
+
+class PayPal implements Payment {
+    public void pay() { System.out.println("PayPal"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Payment cc = new CreditCard();
+        Payment pp = new PayPal();
+        cc.pay(); pp.pay();
+    }
+}
